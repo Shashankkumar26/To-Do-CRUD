@@ -1,0 +1,168 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+:root{
+    --bg-color :#223;
+    --text-color: #fff;
+    --main-color: #29fd53;
+}
+header{
+position: sticky;
+width: 100%;
+top: 0;
+right: 0;
+z-index: 1000;
+display: flex;
+justify-content: space-between;
+background: var(--bg-color);
+padding: 28px 5%;
+transition: all 0.50s ease;
+
+
+}
+
+.logo{
+display: flex;
+align-items: center;
+}
+.logo i{
+color: var(--main-color);
+font-size: 25px;
+margin-right: 3px;
+
+}
+.logo span{
+color: var(--text-color);
+font-size: 1.2rem;
+font-weight: 600;
+
+}
+.logo .sudama{
+    font-weight: 700;
+    color: Blue;
+    font-size: 1.6rem;
+}
+ .logo .Aush{
+    font-weight: 600;
+    color: wheat;
+    font-size: 1.6rem;
+}
+.navbar{
+display: flex;
+
+}
+.navbar a{
+color: var(--text-color);
+font-size: 1rem;
+font-weight: 300;
+padding: 2px 0;
+margin: 0px 18px;
+transition: all .50 ease;
+}
+.navbar a:hover{
+color: var(--main-color);
+
+}
+.navbar a.active{
+color: var(--main-color);
+}
+.main{
+ display: flex;
+ align-items: center;
+
+}
+.main a{
+ margin-right:10px ;
+ margin-left:4px ;
+ color: var(--text-color);
+ font-size: 1.1rem;
+ font-weight: 300;
+ transition: all .50 ease;
+}
+.user{
+display: flex;
+align-items: center;
+
+}
+.user i{
+color: var(--main-color);
+font-size: 25px;
+margin-right: 5px;
+
+}
+.main a:hover{
+color: var(--main-color);
+ 
+}
+.ri-menu-line{
+color: var(--text-color);
+}
+#menu-icon{
+font-size: 35px;
+cursor: pointer;
+z-index: 10001;
+display: none;
+}
+
+@media (max-width: 1280px) {
+ header{
+    padding: 14px 2%;
+    transition: .2s;
+ }
+ .navbar a{
+    padding: 5px 0;
+    margin: 0px 15px;
+
+ }
+}
+/* ... (previous styles) ... */
+
+@media (max-width: 1090px) {
+    #menu-icon {
+      display: block;
+    }
+    .navbar {
+      position: absolute;
+      right:0%;
+      top: 100%;
+      width: 250px;
+      max-height: 0;
+      overflow: hidden;
+      background-color: var(--bg-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      transition: max-height 0.2s ease; /* Use max-height to control hiding/showing the navbar */
+    }
+  
+    .navbar.open {
+      max-height: 100vh; /* Set the height when the navbar is open */
+    }
+  
+    .navbar a {
+      display: block;
+      margin: 4px 0;
+      padding: 0px 25px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      transition: all 0.5s ease;
+    }
+  
+    .navbar a:hover {
+      color: var(--text-color);
+      background-color: var(--main-color);
+      transform: translateY(5px);
+    }
+  
+    .navbar a.active {
+      color: var(--text-color);
+    }
+  }
+  

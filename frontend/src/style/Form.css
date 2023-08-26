@@ -1,0 +1,120 @@
+/* task-form.css */
+.task-form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+  }
+  
+  .task-form {
+    max-width: 800px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    position: relative; /* Add position relative for positioning the close button */
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Increase the height of the description textarea */
+  #description {
+    min-height: 120px;
+    padding: 8px;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Close button styles */
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
+    padding: 0;
+  }
+  
+  /* Responsive CSS */
+  @media screen and (max-width: 768px) {
+    .task-form {
+      max-width: 500px;
+    }
+  
+    /* Adjust the height and padding for smaller screens */
+    #description {
+      min-height: 80px;
+      padding: 6px;
+    }
+  
+    /* Reduce the size of the closing button on small screens */
+    .close-button {
+      font-size: 16px;
+      padding: 8px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .task-form {
+      max-width: 300px;
+      padding: 10px;
+    }
+  
+    .form-group {
+      margin-bottom: 15px;
+    }
+  
+    /* Adjust the height and padding for even smaller screens */
+    #description {
+      min-height: 60px;
+      padding: 4px;
+    }
+  
+    /* Reduce the size of the closing button on even smaller screens */
+    .close-button {
+      font-size: 14px;
+      padding: 6px;
+    }
+  }
+  
